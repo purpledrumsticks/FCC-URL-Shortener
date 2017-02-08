@@ -6,7 +6,7 @@ let validUrl = require('valid-url');
 let Url = require('./app/url.js');
 
 let mongoose = require('mongoose');
-mongoose.connect('mongodb://purpledrumsticks:$mokeTheWeed@ds127948.mlab.com:27948/url-shortener-micro-serv');
+mongoose.connect(process.env.MONGOLAB_URI);
 mongoose.connection.on('error', (err) => {
   console.error('MongoDB connection error: ' + err);
   process.exit(-1);
