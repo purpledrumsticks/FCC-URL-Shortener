@@ -12,7 +12,7 @@ mongoose.connection.on('error', (err) => {
   process.exit(-1);
 });
 
-let baseUrl = process.env.MONGOLAB_URI || ('http://localhost:' + 3000 + '/');
+let baseUrl = process.env.BASE_URL || ('http://localhost:' + 3000 + '/');
 
 let express = require('express');
 let app = express();
